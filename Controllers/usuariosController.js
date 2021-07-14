@@ -77,7 +77,7 @@ const usuariosPatch = (req, res = response) => {
     });
 }
 
-
+//solo para cambiar algo y volver a subir
 const usuariosDelete = async(req, res = response) => {
 
     const { id } = req.params;
