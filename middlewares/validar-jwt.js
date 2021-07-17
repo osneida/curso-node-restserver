@@ -23,7 +23,7 @@ const validarJWT = async(req = request, res=response, next) => {
             return res.status(401).json({
                 msg: 'Token no Válido - usuario no existe en la BD'
             })
-}
+        }
 
         //verificar que el usuario tenga estado true
 
@@ -37,7 +37,6 @@ const validarJWT = async(req = request, res=response, next) => {
 
         next();
     } catch (error) {
-        console.log(error);
         res.status(401).json({
             msg: 'token no Válido'
         })
