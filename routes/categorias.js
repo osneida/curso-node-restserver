@@ -26,7 +26,6 @@ router.get('/:id', [
 router.post('/', [
         validarJWT,
         check('nombre', 'El nombre es obligatorio').notEmpty(),
-        check('id', 'No es un ID Válido').isMongoId(),
         validarCampos   
     ],crearCategoria );
 
